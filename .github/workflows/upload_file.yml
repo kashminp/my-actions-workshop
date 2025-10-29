@@ -1,0 +1,20 @@
+name: Upload file artifact
+
+on:
+    workflow_dispatch:
+
+jobs:
+    upload-file:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Generate file
+                run: echo "Generated at $(date)" > sample.txt
+
+            - name: Upload artifact
+                uses: actions/upload-artifact@v4
+                with:
+                    name: sample-file
+                    path: sample.txt
+                    retention-days: 7
