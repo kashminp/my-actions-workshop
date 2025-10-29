@@ -10,7 +10,7 @@ jobs:
             - uses: actions/checkout@v4
 
             - name: Generate file
-                run: echo "Generated at $(date)" > sample.txt
+              run: echo "Generated at $(date)" > sample.txt
 
             - name: Upload artifact
                 uses: actions/upload-artifact@v4
