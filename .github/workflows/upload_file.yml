@@ -13,8 +13,8 @@ jobs:
               run: echo "Generated at $(date)" > sample.txt
 
             - name: Upload artifact
-                uses: actions/upload-artifact@v4
-                with:
-                    name: sample-file
-                    path: sample.txt
-                    retention-days: 7
+              uses: actions/upload-artifact@v4
+              with:
+                name: sample-file
+                path: sample.txt
+                retention-days: 7
