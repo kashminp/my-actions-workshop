@@ -15,7 +15,7 @@ jobs:
             - name: Upload artifact
               uses: actions/upload-artifact@v4
               with:
-                name: sample-file.txt
+                name: sample.txt
                 path: sample.txt
                 retention-days: 30
     download-file:
@@ -28,7 +28,7 @@ jobs:
             - name: Download artifact
               uses: actions/download-artifact@v4
               with:
-                name: sample-file.txt
+                name: sample.txt
                 path: .
             - name: Verify downloaded file
               run: |
