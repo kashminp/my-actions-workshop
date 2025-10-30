@@ -17,4 +17,4 @@ jobs:
               with:
                 name: sample-file.txt
                 path: sample.txt
-                retention-days: 7
+                retention-days: 30
