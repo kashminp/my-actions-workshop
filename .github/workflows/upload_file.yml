@@ -23,8 +23,7 @@ jobs:
         steps:
             - name: Before downloaded file
               run: |
-                ls -l retrieved
-                cat retrieved/sample.txt
+                ls -l 
             - uses: actions/checkout@v4
             - name: Download artifact
               uses: actions/download-artifact@v4
