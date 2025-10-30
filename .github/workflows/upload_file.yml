@@ -18,3 +18,20 @@ jobs:
                 name: sample-file.txt
                 path: sample.txt
                 retention-days: 30
+    download-file:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Before downloaded file
+              run: |
+                ls -l retrieved
+                cat retrieved/sample.txt
+            - uses: actions/checkout@v4
+            - name: Download artifact
+              uses: actions/download-artifact@v4
+              with:
+                name: sample-file.txt
+                path: .
+            - name: Verify downloaded file
+              run: |
+                ls -l
+                cat sample-file.txt
