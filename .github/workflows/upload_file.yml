@@ -21,10 +21,10 @@ jobs:
     download-file:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v4
             - name: Before downloaded file
               run: |
                 ls -l 
-            - uses: actions/checkout@v4
             - name: Download artifact
               uses: actions/download-artifact@v4
               with:
@@ -33,4 +33,4 @@ jobs:
             - name: Verify downloaded file
               run: |
                 ls -l
-                cat sample-file.txt
+                cat sample.txt
